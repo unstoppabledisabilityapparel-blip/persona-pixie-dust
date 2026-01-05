@@ -29,7 +29,7 @@ export function CategorySelect({
       <Label htmlFor={id} className="block text-sm font-medium text-foreground mb-1.5">
         {label}
       </Label>
-      <Select value={value} onValueChange={onChange}>
+      <Select key={`${id}-${value}`} value={value} onValueChange={onChange}>
         <SelectTrigger id={id} className="w-full bg-card border-input">
           <SelectValue placeholder={`Select ${label.toLowerCase()}`} />
         </SelectTrigger>
