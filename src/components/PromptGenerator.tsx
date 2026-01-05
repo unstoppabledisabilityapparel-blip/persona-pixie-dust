@@ -36,6 +36,10 @@ export function PromptGenerator() {
       reset[key] = categories[key][0];
     });
     setSelections(reset as Record<CategoryKey, string>);
+
+    // Clear previous results so the next generate is a fresh batch
+    setGeneratedPrompts([]);
+    setAllCopied(false);
   };
 
   const generatePrompts = useCallback(() => {
