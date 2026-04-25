@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CategorySelect } from "./CategorySelect";
 import { PromptCard } from "./PromptCard";
+import { ThemeToggle } from "./ThemeToggle";
 import {
   categories,
   categoryLabels,
@@ -107,11 +108,14 @@ export function PromptGenerator() {
       {/* Hero Header */}
       <div className="gradient-hero text-primary-foreground py-10 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-3">
-            <Sparkles className="w-8 h-8" />
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Unstoppable Adaptive Character Style Pack
-            </h1>
+          <div className="flex items-start justify-between gap-4 mb-3">
+            <div className="flex items-center gap-3">
+              <Sparkles className="w-8 h-8" />
+              <h1 className="text-3xl md:text-4xl font-bold">
+                Unstoppable Adaptive Character Style Pack
+              </h1>
+            </div>
+            <ThemeToggle />
           </div>
           <p className="text-lg md:text-xl opacity-90">
             Generate diverse, inclusive prompts for African-American male wheelchair users
